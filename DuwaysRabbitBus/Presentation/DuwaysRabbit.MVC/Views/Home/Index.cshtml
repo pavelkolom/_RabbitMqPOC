@@ -1,0 +1,29 @@
+﻿@model OrderViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Rabbit MQ Proof of concept</h1>
+</div>
+
+<form action="/home/Order" method="post">
+    <label for="AccountId">Account Id:</label>
+    @Html.TextBoxFor(s => s.AccountId)
+    <br />
+    <br />
+    <label for="CourseId">CourseId:</label>
+    @Html.TextBoxFor(s => s.CourseId)
+    <br />
+    <br />
+    <label for="Amount">Amount:</label>
+    @Html.TextBoxFor(s => s.Amount)
+    <br />
+    <br />
+    <label for="OrderNotes">Notes:</label>
+    @Html.TextBoxFor(s => s.OrderNotes)
+    <br />
+    <br />
+    <input type="submit" name="Order" />
+</form>
